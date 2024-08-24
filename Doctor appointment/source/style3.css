@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Hide scrollbar for entire page */
+    background-size: 100% 100%;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220531/pngtree-remote-medical-appointment-social-distancing-radiologist-healthcare-photo-image_36878764.jpg"); /* Light gray background for hospital theme */
+}
+
+/* Custom Gradient Background */
+
+
+/* Keyframes for Animation */
+
+
+/* App Container */
+.container {
+    background: rgba(226, 137, 48, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1200px;
+    padding: 30px;
+    text-align: center;
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 90vh; /* Constrain height to viewport height */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    position: relative;
+    margin: auto; /* Center horizontally */
+    padding-top: 20px; /* Add padding from top */
+    background: rgba(0, 0, 0, 0.2); /* White background for content */
+}
+
+/* Invisible Scrollbars for WebKit browsers */
+.container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+/* Header */
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: orange; /* Dark teal color for header */
+}
+
+/* Sections */
+section {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: orange; /* Dark teal color for labels */
+}
+
+form input, form select, form button {
+    width: 50%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    box-sizing: border-box; 
+}
+
+/* Focus Styles */
+form input:focus, form select:focus {
+    border-color: orange; /* Dark teal border on focus */
+    box-shadow: 0 0 10px rgba(225, 152, 61, 0.6); /* Dark teal shadow on focus */
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    background-color: orange; /* Dark teal background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.view-btn {
+    margin-bottom: 20px;
+}
+
+/* button:hover {
+    background-color: #004d40; 
+    transform: scale(1.05);
+} */
+
+button:active {
+    transform: scale(1.005);
+}
+
+/* Doctor Card Styles */
+.doctor-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Layout for Doctor Cards (4 per row) */
+.doctor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Ensure 4 cards per row */
+.doctor-card {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+/* Doctor Name and Slot Styles */
+.doctor-card h3 {
+    margin-top: 0;
+    color: orange; /* Dark teal for doctor names */
+}
+
+.slot {
+    display: block;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.slot.booked {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .doctor-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    .doctor-card {
+        flex: 1 1 100%;
+    }
+}
